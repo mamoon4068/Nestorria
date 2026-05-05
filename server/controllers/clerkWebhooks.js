@@ -64,4 +64,3 @@ export default clerkWebhook;
 
 
 
-https://dashboard.clerk.com/apps/app_33ZC8SgZB5w9dMfFsooAQIp4OAy/instances/ins_33ZC8Qg0SfakarUH5qy4D7okNnU/webhooks

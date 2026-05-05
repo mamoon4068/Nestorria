@@ -4,6 +4,7 @@ import "dotenv/config"
 import connectDB from "./config/mongodb.js"
 import { clerkMiddleware } from '@clerk/express'
 import clerkWebhook from "./controllers/clerkWebhooks.js"
+import userRouter from "./routes/userRoute.js"
 
 await connectDB()  // Establish Database Connection
 
@@ -18,6 +19,9 @@ app.use(clerkMiddleware())
 // API to listen clerk webhook
 app.use("/api/clerk", clerkWebhooks)
 
+// Define API Routes
+app.use("/api/user", userRouter)
+app.use("/api/agencies", agencyRouter)
 // Route Endpoint to check API Status
 app.get("/", (req, res) => {
     res.send("API successfully")
