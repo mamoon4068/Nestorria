@@ -7,13 +7,19 @@ import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
  import { useAppContext } from '../context/useAppContext';
 import Item from './Item';
+<<<<<<< HEAD
 import { dummyProperties } from '../assets/data';
+=======
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 
 
 const FeaturedProperties = () => {
 
   const {properties} = useAppContext()
+<<<<<<< HEAD
   const featuredProperties = properties.length ? properties : dummyProperties
+=======
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
   return (
     <section className='max-padd-container py-16 xl:py-22'>
   <span className='medium-18'>Your New Home Awaits!</span>
@@ -50,7 +56,11 @@ const FeaturedProperties = () => {
           modules={[Autoplay]}
           className="h-[488px] md:h-[533px] xl:h-[422px] mt-5"
         >
+<<<<<<< HEAD
           {featuredProperties.slice(0, 6).map((property)=>(
+=======
+          {properties.slice(0, 6).map((property)=>(
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 <SwiperSlide key={property.title}>
   <Item property={property} />
 </SwiperSlide>

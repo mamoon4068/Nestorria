@@ -1,11 +1,15 @@
 import React from 'react'
+<<<<<<< HEAD
 import { useSearchParams } from 'react-router-dom'
+=======
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 import { useAppContext } from "../context/useAppContext";
 import Item from "../components/Item";
 
 
 const Listing = () => {
   const { properties } = useAppContext();
+<<<<<<< HEAD
   const [searchParams] = useSearchParams();
   const searchQuery = searchParams.get('search')?.trim().toLowerCase() || '';
   const filteredProperties = properties.filter((property) => {
@@ -17,6 +21,8 @@ const Listing = () => {
     ].some((value) => value?.toLowerCase().includes(searchQuery));
     return matchesSearch;
   });
+=======
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
   const sortOption = ["Relevant", "Low to High", "High to Low"];
 
   const propertyType = [
@@ -71,9 +77,15 @@ const Listing = () => {
         </div>
         {/* Right Side  */}
         <div className='min-h-[97vh] overflow-y-scroll rounded-xl'>
+<<<<<<< HEAD
           {filteredProperties.length > 0 ? (
 <div className='grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
   {filteredProperties.map((property)=>(
+=======
+          {propertyType.length > 0 ? (
+<div className='grid gap-6 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3'>
+  {properties.map((property)=>(
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
     <Item key={property._id} property={property}/>
   ))}
 </div>

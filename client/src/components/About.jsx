@@ -2,7 +2,10 @@ import React from 'react'
 import { assets } from '../assets/data'
 import Title from './Title'
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 const About = () => {
   return (
     <section className='max-padd-container py-16 xl:py-28 !pt-36'> 
@@ -33,14 +36,22 @@ const About = () => {
 
 
 
+<<<<<<< HEAD
                      <div className='flex gap-3'>
+=======
+                                        <div className='flex gap-3'>
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
                         <img src={assets.map} alt="" 
                         width={20}/>
                         <p>User-friendly interface for smooth navigation</p>
                     </div>
 
 
+<<<<<<< HEAD
                      <div className='flex gap-3'>
+=======
+                                        <div className='flex gap-3'>
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
                         <img src={assets.pound} alt="" 
                         width={20}/>
                         <p>Access to off-market properties</p>
@@ -99,6 +110,7 @@ const About = () => {
   )
 }
 
+<<<<<<< HEAD
 export default About
 
 
@@ -106,3 +118,6 @@ export default About
 
 
 
+=======
+export default About
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70

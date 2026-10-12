@@ -1,5 +1,9 @@
 
+<<<<<<< HEAD
 export default {
+=======
+module.exports = {
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx,css}",
@@ -19,3 +23,7 @@ export default {
   },
   plugins: [],
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70

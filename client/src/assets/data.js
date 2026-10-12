@@ -110,6 +110,7 @@ export const assets = {
     user2,
     user3,
     user4,
+<<<<<<< HEAD
     img1,
     img2,
     img3,
@@ -119,6 +120,8 @@ export const assets = {
     pImg2,
     pImg3,
     pImg4,
+=======
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
     createPrp,
     Client1,
     Client2,

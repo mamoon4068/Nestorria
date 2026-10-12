@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
+<<<<<<< HEAD
 import { useAuth } from '@clerk/clerk-react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import toast from 'react-hot-toast'
 import { assets } from '../../assets/data';
 import { useAppContext } from '../../context/useAppContext';
+=======
+import { assets } from '../../assets/data';
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 
 
 const AddProperty = () => {
@@ -16,7 +20,11 @@ const AddProperty = () => {
     5: null,
   })
   const [inputs, setInputs] = useState({
+<<<<<<< HEAD
     title:"",
+=======
+    title:" ",
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
     description:"",
     city:"",
     country:"",
@@ -37,6 +45,7 @@ const AddProperty = () => {
     },
   })
 
+<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
   const { getToken } = useAuth();
   const { setProperties } = useAppContext();
@@ -71,12 +80,19 @@ const AddProperty = () => {
       setLoading(false);
     }
   };
+=======
+  const [_loading, _setLoading] = useState(false);
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 
 
   return (
     <div className='md:px-8 py-6 xl:py-8 m-1.5 sm:m-3 h-[97vh] overflow-y-scroll
     lg:w-11/12 bg-white shadow rounded-xl'>
+<<<<<<< HEAD
       <form onSubmit={handleSubmit} className='flex flex-col gap-y-3.5 px-2 text-sm xl:max-w-3xl'>
+=======
+      <form className='lex flex-col gap-y-3.5 px-2 text-sm xl:max-w-3xl'>
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
         <div className='w-full'>
           <h5 className='h5'>Property Name</h5>
           <input 
@@ -165,6 +181,7 @@ const AddProperty = () => {
             min={0} 
             className='px-3 py-1.5 ring-1 ring-slate-900/10 rounded-lg bg-amber-500/5 mt-1 w-28'/>
           </div>
+<<<<<<< HEAD
           <div>
             <h5 className='h5'>Sale Price</h5>
             <input
@@ -175,6 +192,8 @@ const AddProperty = () => {
             min={0}
             className='px-3 py-1.5 ring-1 ring-slate-900/10 rounded-lg bg-amber-500/5 mt-1 w-28'/>
           </div>
+=======
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 {/* description Bedrooms */}
              <div>
             <h5 className='h5'>Bedrooms </h5>
@@ -261,9 +280,15 @@ const AddProperty = () => {
           </label>
         ))}
         </div>
+<<<<<<< HEAD
         <button type='submit' disabled={loading} className='btn-secondary text-black font-semibold
         mt-3 p-2 max-w-36 sm:w-full rounded-xl' >
           {loading ? "Adding" : "Add Property"}
+=======
+        <button type='submit' disabled={_loading} className='btn-secondary text-black font-semibold
+        mt-3 p-2 max-w-36 sm:w-full rounded-xl' >
+          {_loading ? "Adding" : "Add Property"}
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
         </button>
       </form>
     </div>

@@ -13,10 +13,15 @@
     "@clerk/clerk-react": "^5.49.1",
     "@tailwindcss/cli": "^4.1.13",
     "@tailwindcss/vite": "^4.1.13",
+<<<<<<< HEAD
     "axios": "^1.20.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-hot-toast": "^2.6.1",
+=======
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
     "react-router-dom": "^7.9.1",
     "swiper": "^12.0.2",
     "tailwindcss": "^4.1.13"
@@ -26,7 +31,10 @@
     "@types/react": "^19.1.13",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
+<<<<<<< HEAD
     "baseline-browser-mapping": "^2.11.27",
+=======
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",

@@ -31,9 +31,15 @@ const Faq = () => {
   return (
     <section className='max-padd-container py-16 xl:py-22'>
       {/* container */}
+<<<<<<< HEAD
       <div className='flex flex-col gap-y-12 xl:flex-row xl:justify-between xl:items-start'>
         {/* Image - left Side  */}
 <div className="flex-1">
+=======
+      <div className='flex flex-col gap-y-12 xl:flex-row'>
+        {/* Image - left Side  */}
+<dic className="flex-1">
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
   <div className="relative rounded-3xl overflow-hidden inline-block">
     <img src={assets.faq} alt="faqImage" className='block w-full' />
     <div className='absolute top-5 left-5 right-5 
@@ -47,6 +53,7 @@ const Faq = () => {
       </div>
     </div>
      </div>
+<<<<<<< HEAD
 </div>
 
         {/* FAQS - Right Side */}
@@ -77,6 +84,37 @@ const Faq = () => {
             </div>
           </div>
         </div>
+=======
+</dic>
+
+        {/* FAQS - Right Side */}
+        <div className="flex-1 flex flex-col justify-center">
+          <Title
+          title1={"Homes Made for Living"}
+          title2={"Simplifying Your Property Search Every Step"}
+          para={
+            "From finding the right location to finalizing the deal, we ensure your real estate journey is smooth, efficient, and fulfilling."
+
+          }
+          titleStyles={"mb-10"}
+          />
+                <div className='max-w-xl w-full  flex flex-col gap-4 items-start text-left'>
+                    {faqsData.map((faq, index) => (
+                        <div key={index} className='flex flex-col items-start w-full'>
+                            <div className='flex items-center justify-between w-full cursor-pointer bg-amber-500/10 border border-slate-900/10 p-2 px-4 rounded-lg' onClick={() => setOpenIndex(openIndex === index ? null : index)}>
+                                <h2 className='text-sm'>{faq.question}</h2>
+                                <img src={assets.down} alt="" />
+                                
+                            </div>
+                            <p className={`text-sm text-slate-500 px-4 transition-all duration-500 ease-in-out ${openIndex === index ? "opacity-100 max-h-[300px] translate-y-0 pt-4" : "opacity-0 max-h-0 -translate-y-2"}`} 
+                            >
+                                {faq.answer}
+                            </p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+>>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 
 
         </div>
