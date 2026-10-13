@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 import { createContext } from "react";
 
 export const AppContext = createContext(null);
-=======
 
 import React, { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -39,10 +38,13 @@ export const AppContextProvider = ({ children }) => {
         setShowAgencyReg,
         isOwner,
         setIsOwner,
+        axios,
+        getTokan,
+
+        
     };
     return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
 
 
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
