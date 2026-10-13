@@ -15,26 +15,15 @@
     "@clerk/express": "^1.7.53",
     "cloudinary": "^2.8.0",
     "cors": "^2.8.5",
-<<<<<<< HEAD
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mongodb": "3.6",
     "mongoose": "^9.10.4",
-=======
-    "dotenv": "^17.2.3",
-    "express": "^5.1.0",
-    "mongodb": "3.6",
-    "mongoose": "^9.0.0",
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
     "multer": "^2.0.2",
     "stripe": "^20.0.0",
     "svix": "^1.81.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "nodemon": "^1.14.10"
-=======
     "nodemon": "^3.1.11"
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
   }
 }
