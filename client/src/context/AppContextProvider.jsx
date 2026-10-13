@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth, useUser } from "@clerk/clerk-react";
@@ -6,10 +5,10 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { AppContext } from "./AppContext";
 
-axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL;
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL || "";
 
 export const AppContextProvider = ({ children }) => {
-  const currency = import.meta.env.VITE_CURRENCY || "₹";
+  const currency = import.meta.env.VITE_CURRENCY || "?";
   const navigate = useNavigate();
   const { user } = useUser();
   const { getToken, isLoaded, userId } = useAuth();
@@ -21,7 +20,6 @@ export const AppContextProvider = ({ children }) => {
 
   useEffect(() => {
     let cancelled = false;
-
     const getProperties = async () => {
       try {
         const { data } = await axios.get("/api/properties");
@@ -36,19 +34,16 @@ export const AppContextProvider = ({ children }) => {
     };
 
     getProperties();
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, []);
 
   useEffect(() => {
     let cancelled = false;
-
     const getUserProfile = async () => {
       try {
         const token = await getToken();
         const { data } = await axios.get("/api/user", {
-          headers: { Authorization: `Bearer ${token}` },
+          headers: { Authorization: "Bearer " + token },
         });
         if (!data.success) {
           throw new Error(data.message || "Unable to load your account");
@@ -69,54 +64,19 @@ export const AppContextProvider = ({ children }) => {
       setSearchedCities([]);
     }
 
-    return () => {
-      cancelled = true;
-    };
+    return () => { cancelled = true; };
   }, [getToken, isLoaded, userId]);
 
   const value = {
     navigate,
     properties,
     setProperties,
-=======
-import React, { useEffect, useState, useContext } from "react";
-import { useNavigate } from "react-router-dom";
-import { dummyProperties } from "../assets/data";
-import { AppContext } from "./AppContext";
-import { useUser } from "@clerk/clerk-react";
-import Dashboard from "../pages/owner/Dashboard";
-import Sidebar from "../components/owner/Sidebar";
-
-export const useAppContext = () => useContext(AppContext);
-
-export const AppContextProvider = ({ children }) => {
-  const currency = import.meta.env.VITE_CURRENCY;
-  const navigate = useNavigate();
-  const { user } = useUser();
-
-  const [properties, setProperties] = useState([]);
-  const [showAgencyReg, setShowAgencyReg] = useState(false);
-  const [isOwner, setIsOwner] = useState(false);
-
-  const getProperties = () => {
-    setProperties(dummyProperties);
-  };
-
-  useEffect(() => {
-    getProperties();
-  }, []);
-
-  const value = {
-    navigate,
-    properties,
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
     currency,
     user,
     showAgencyReg,
     setShowAgencyReg,
     isOwner,
     setIsOwner,
-<<<<<<< HEAD
     axios,
     getToken,
     searchQuery,
@@ -126,13 +86,4 @@ export const AppContextProvider = ({ children }) => {
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
-=======
-  };
-
-  return (
-    <AppContext.Provider value={value}>
-      {children}
-    </AppContext.Provider>
-  );
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
 };

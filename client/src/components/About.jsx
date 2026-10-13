@@ -1,123 +1,21 @@
-import React from 'react'
-import { assets } from '../assets/data'
-import Title from './Title'
+const About = () => (
+  <section className="max-padd-container py-20">
+    <div className="grid gap-10 md:grid-cols-2 items-center">
+      <div>
+        <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#f59e0b]">Why choose us</p>
+        <h2 className="mt-4 text-3xl font-bold text-slate-900">Smart living starts with the right place.</h2>
+        <p className="mt-4 text-slate-600">We help buyers, renters, and investors discover homes and spaces that fit their lifestyle and budget.</p>
+      </div>
+      <div className="grid gap-4 sm:grid-cols-2">
+        {["Verified listings", "Transparent pricing", "Local expertise", "Fast support"].map((item) => (
+          <div key={item} className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="mb-3 h-10 w-10 rounded-full bg-amber-100" />
+            <h3 className="font-semibold text-slate-900">{item}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
-const About = () => {
-  return (
-    <section className='max-padd-container py-16 xl:py-28 !pt-36'> 
-        {/* container */}
-        <div className='flex items-center flex-col lg:flex-row gap-12'>
-            {/* Info -  Left Side  */}
-            <div className='flex-1'>
-                <Title 
-                title1={"Your Trusted Real Estate Partner"}
-                title2={"Helping You Every Step of the Way"}
-                para={"Trust, clarity, and simplicity are at the core of everything we do to make your property journey easy."}
-                titleStyles={'mb-10'}
-                />
-                <div className='flex flex-col gap-6 mt-5'>
-                    <div className='flex gap-3'>
-                        <img src={assets.calendarSecondary} alt="" 
-                        width={20}/>
-                        <p>In-app scheduling for property viewings</p>
-                    </div>
-
-
-
-                    <div className='flex gap-3'>
-                        <img src={assets.graph} alt="" 
-                        width={20}/>
-                        <p>Real-time market price update</p>
-                    </div>
-
-
-
-<<<<<<< HEAD
-                     <div className='flex gap-3'>
-=======
-                                        <div className='flex gap-3'>
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
-                        <img src={assets.map} alt="" 
-                        width={20}/>
-                        <p>User-friendly interface for smooth navigation</p>
-                    </div>
-
-
-<<<<<<< HEAD
-                     <div className='flex gap-3'>
-=======
-                                        <div className='flex gap-3'>
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
-                        <img src={assets.pound} alt="" 
-                        width={20}/>
-                        <p>Access to off-market properties</p>
-                    </div>
-                </div>
-                {/* Rating */}
-                <div className='flex items-center divide-x divide-gray-300 mt-11'>
-                    <div className='flex  -space-x-3 pr-3'>
-                        <img 
-                        src={assets.Client1} 
-                        alt="image"
-                        className='w-12 h-12 rounded-full border-2 border-white hover:-translate-y-1 z-1'
-                         />
-                          <img 
-                        src={assets.Client2} 
-                        alt="image"
-                        className='w-12 h-12 rounded-full border-2 border-white hover:-translate-y-1 z-1'
-                         />
-                          <img 
-                        src={assets.Client3} 
-                        alt="image"
-                        className='w-12 h-12 rounded-full border-2 border-white hover:-translate-y-1 z-1'
-                         />
-                          <img 
-                        src={assets.Client4} 
-                        alt="image"
-                        className='w-12 h-12 rounded-full border-2 border-white hover:-translate-y-1 z-1'
-                         />
-                    </div>
-                    <div className='pl-3'>
-                        <div className='flex items-center'>
-                    <img src={assets.star} alt="starIcon" width={17} />
-                    <img src={assets.star} alt="starIcon" width={17} />
-                    <img src={assets.star} alt="starIcon" width={17} />
-                    <img src={assets.star} alt="starIcon" width={17} />
-                    <img src={assets.star} alt="starIcon" width={17} />
-                    <p className='text-sm text-gray-500'></p>
-                        </div>
-                        <p className='text-sm text-gray-500'>
-                            Trusted by{" "}
-                            <span className='font-medium text-gray-800'>100,000+</span>{" "}
-                            users
-                        </p>
-                    </div>
-                </div>
-            </div>
-            {/* Image - Right side */}
-            <div className='flex-1'>
-                <div className='relative flex justify-end'>
-                    <img src={assets.About} alt="aboutImg" className='rounded-3xl' />
-
-                </div>
-            </div>
-        </div>
-    </section>
-  )
-}
-
-<<<<<<< HEAD
-export default About
-
-
-
-
-
-
-=======
-export default About
->>>>>>> cace4f0542e8dd1bf9975b659f53b668c525da70
+export default About;
